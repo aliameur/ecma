@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .horizontal-divider {
+        @apply relative after:absolute after:top-1/2 after:-translate-y-1/2 after:right-0 after:translate-x-full after:w-[70px] after:bg-dark-200 after:h-[3px];
+    }
+
+    .gradient-01 {
+        position: absolute;
+        width: 1000px;
+        height: 800px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-70%) translateY(-50%);
+
+        background: #465085;
+        filter: blur(1200px);
+        opacity: 0.6;
+    }
+}
+
+@layer base {
+    .slide-in {
+        @apply absolute top-0 left-0 w-full h-screen bg-[#171829] origin-bottom z-50
+    }
+
+    .slide-out {
+        @apply absolute top-0 left-0 w-full h-screen bg-[#171829] origin-top z-50
+    }
+}

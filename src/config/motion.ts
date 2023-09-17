@@ -8,6 +8,14 @@ export const slideUp = (delay: number): Variants => ({
   },
 });
 
+export const longSlideUp = (delay: number): Variants => ({
+  hidden: { y: "200%" },
+  show: {
+    y: "0%",
+    transition: { duration: 1, ease: [0.69, -0.01, 0.27, 1], delay: delay },
+  },
+});
+
 export const scaleUp = (
   direction: "all" | "x",
   delay: number,

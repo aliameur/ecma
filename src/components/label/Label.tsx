@@ -14,8 +14,15 @@ export const Label: FC<LabelProps> = ({ children, icon, delay }) => {
       <motion.div
         className="absolute -inset-0.5 z-50 rounded-full border-2 border-dark-200/50"
         initial={{ clipPath: "inset(0% 50% 100% 50%)" }}
-        transition={{ duration: 1, ease: "anticipate", delay: delay - 0.05 }}
-        animate={{ clipPath: ["inset(0% 0% 100% 0%)", "inset(0% 0% 0% 0%)"] }}
+        transition={{ duration: 1, delay: delay }}
+        animate={{
+          clipPath: [
+            "inset(0% 50% 100% 50%)",
+            "inset(0% 25% 65% 25%)",
+            "inset(0% 0% 50% 0%)",
+            "inset(0% 0% 0% 0%)",
+          ],
+        }}
       />
       <motion.div
         className="flex h-5 w-5 items-center justify-center"

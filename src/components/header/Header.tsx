@@ -1,9 +1,8 @@
-"use client";
 import { Label } from "@/components/label";
 import { Selector } from "@/components/selector";
 import { AnimationIcon, FilmIcon, MotionIcon, ThreeDIcon } from "@/icons";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import { FC, ReactNode, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   LightBulbIcon,
@@ -30,10 +29,21 @@ export const Header = () => {
       <div className="flex h-full">
         <div className="flex flex-col items-start pt-32">
           <div className="flex space-x-10 pt-1.5">
-            <ChevronLeftIcon
-              className="z-50 mt-4 h-8 w-8 cursor-pointer text-dark-200 duration-300 ease-in-out hover:scale-105 hover:text-dark-100 active:scale-95 active:text-dark-200"
-              onClick={decrement}
-            />
+            <motion.div
+              className="z-50 mt-4 h-8 w-8"
+              initial={{ x: "50%", opacity: 0, scale: 0.8 }}
+              animate={{ x: 0, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+                ease: [0.69, -0.01, 0.27, 1],
+              }}
+            >
+              <ChevronLeftIcon
+                className="cursor-pointer text-dark-200 duration-300 ease-in-out hover:scale-105 hover:text-dark-100 active:scale-95 active:text-dark-200"
+                onClick={decrement}
+              />
+            </motion.div>
             <Selector current={current} />
           </div>
           <div className="mt-auto">
@@ -64,10 +74,21 @@ export const Header = () => {
                 ANIMATE
               </motion.span>
             </h1>
-            <ChevronRightIcon
-              className="absolute right-0 top-1/2 h-8 w-8 -translate-y-7 translate-x-20 cursor-pointer text-dark-200 duration-300 ease-in-out hover:scale-105 hover:text-dark-100 active:scale-95 active:text-dark-200"
-              onClick={increment}
-            />
+            <motion.div
+              className="absolute right-0 top-1/2 h-8 w-8"
+              initial={{ x: 64, opacity: 0, scale: 0.8, y: -28 }}
+              animate={{ x: 80, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+                ease: [0.69, -0.01, 0.27, 1],
+              }}
+            >
+              <ChevronRightIcon
+                className="cursor-pointer text-dark-200 duration-300 ease-in-out hover:scale-105 hover:text-dark-100 active:scale-95 active:text-dark-200"
+                onClick={increment}
+              />
+            </motion.div>
           </div>
           <div className="mb-8 mt-4 flex gap-16">
             <IconCircle divider delay={0.15} delay2={0.35}>

@@ -27,7 +27,7 @@ export default function Courses() {
         <Row
           number={2}
           title="motion"
-          description="Modeling, lighting, animation, and many other important topics for 3D"
+          description="Master basic 3D principles and lay the foundation for the future"
           icon={<LightBulbIcon className="h-full w-full text-gold" />}
           labels={
             <>

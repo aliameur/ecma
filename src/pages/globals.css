@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    .horizontal-divider {
-        @apply relative after:absolute after:top-1/2 after:-translate-y-1/2 after:right-0 after:translate-x-full after:w-[70px] after:bg-dark-200 after:h-[3px];
-    }
-
     .gradient-01 {
         position: absolute;
         width: 1000px;

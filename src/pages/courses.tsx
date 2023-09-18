@@ -17,6 +17,7 @@ export default function Courses() {
             title="2d & 3d"
             description="Modeling, lighting, animation, and many other important topics for 3D"
             icon={<LightBulbIcon className="h-full w-full text-gold" />}
+            backgroundUrl='/last.mp4'
             labels={
               <>
                 <Label
@@ -45,6 +46,7 @@ export default function Courses() {
             title="motion"
             description="Master basic 3D principles and lay the foundation for the future"
             icon={<Square3Stack3DIcon className="h-full w-full text-gold" />}
+            backgroundUrl='/movin2.mp4'
             labels={
               <>
                 <Label
@@ -67,6 +69,7 @@ export default function Courses() {
             title="vfx 23"
             description="VFX 2023 Cinema 4D course from Maxon Certified Trainer, John Maloni"
             icon={<StarIcon className="h-full w-full text-gold" />}
+            backgroundUrl="/video 1.mp4"
             labels={
               <>
                 <Label
